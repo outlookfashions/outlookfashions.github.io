@@ -1,222 +1,120 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fashion Studio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KTailor</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; }
+    header { background:#000; color:#fff; padding:20px; text-align:center; }
+    header h1 { margin:0; }
+    header p { margin:5px 0 0; }
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+    .hero {
+      padding:80px 20px;
+      text-align:center;
+      background:#f5f5f5;
+    }
+    .hero h2 { font-size:32px; margin-bottom:10px; }
+    .hero p { color:#555; }
 
-body {
-  color: #333;
-  scroll-behavior: smooth;
-}
+    .btn {
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 25px;
+      background:#000;
+      color:#fff;
+      text-decoration:none;
+      border-radius:5px;
+    }
 
-/* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 50px;
-  background: #000;
-  color: #fff;
-  position: sticky;
-  top: 0;
-}
+    .section {
+      padding:50px 20px;
+      text-align:center;
+    }
 
-nav h1 { font-size: 22px; }
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-}
+    .cards {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+    }
 
-/* HERO */
-.hero {
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1521336575822-6da63fb45455') center/cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
+    .card {
+      border:1px solid #ddd;
+      padding:20px;
+      width:250px;
+      border-radius:8px;
+    }
 
-.hero h2 {
-  font-size: 50px;
-}
+    footer {
+      background:#000;
+      color:#fff;
+      text-align:center;
+      padding:20px;
+    }
 
-.hero button {
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: none;
-  background: #ff4d6d;
-  color: white;
-  cursor: pointer;
-}
+    /* WhatsApp Button */
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:#fff;
+      padding:15px;
+      border-radius:50%;
+      font-size:20px;
+      text-decoration:none;
+    }
+  </style>
 
-/* SECTIONS */
-section {
-  padding: 60px 50px;
-  text-align: center;
-}
-
-h2 {
-  margin-bottom: 30px;
-}
-
-/* CATEGORY GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
-}
-
-.card {
-  padding: 40px;
-  background: #f5f5f5;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* COLLECTION */
-.collection img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* ABOUT */
-.about {
-  background: #111;
-  color: white;
-}
-
-/* CTA */
-.cta {
-  background: #ff4d6d;
-  color: white;
-}
-
-.cta button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  border: none;
-  cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-  padding: 20px;
-  background: #000;
-  color: white;
-  text-align: center;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: green;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px) {
-  .hero h2 { font-size: 30px; }
-  nav { flex-direction: column; text-align: center; }
-}
-</style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <h1>FashionHub</h1>
-  <div>
-    <a href="#home">Home</a>
-    <a href="#category">Categories</a>
-    <a href="#collection">Collection</a>
-    <a href="#about">About</a>
-  </div>
-</nav>
+<header>
+  <h1>KTailor</h1>
+  <p>Perfect Fit. Personal Style.</p>
+</header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div>
-    <h2>Design Your Style</h2>
-    <p>Custom Fashion for Everyone</p>
-    <button onclick="scrollToSection('category')">Explore</button>
-  </div>
+<section class="hero">
+  <h2>Custom Tailoring for Every Occasion</h2>
+  <p>From formal wear to trendy outfits — we stitch your style to perfection.</p>
+  <a href="#contact" class="btn">Contact Now</a>
 </section>
 
-<!-- CATEGORY -->
-<section id="category">
-  <h2>Our Categories</h2>
-  <div class="grid">
+<section class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Custom Stitching</div>
+    <div class="card">Alterations</div>
     <div class="card">Formal Wear</div>
-    <div class="card">Casual Wear</div>
-    <div class="card">Trendy Styles</div>
-    <div class="card">Custom Tailoring</div>
+    <div class="card">Casual & Trendy Designs</div>
   </div>
 </section>
 
-<!-- COLLECTION -->
-<section id="collection">
-  <h2>Latest Collection</h2>
-  <div class="grid collection">
-    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
-    <img src="https://images.unsplash.com/photo-1520975922284-9e0f1d1bcd18">
-    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<section class="section" style="background:#f9f9f9;">
+  <h2>Who We Serve</h2>
+  <div class="cards">
+    <div class="card">Working Professionals</div>
+    <div class="card">College Students</div>
+    <div class="card">School Students</div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <h2>About Us</h2>
-  <p>We provide custom fashion solutions tailored to your style and comfort.</p>
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Reach out to us for your perfect outfit.</p>
+  <a href="https://wa.me/91XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Start Your Design Today</h2>
-  <button onclick="contact()">Contact Us</button>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <p>© 2026 FashionHub</p>
+  <p>© 2026 KTailor. All rights reserved.</p>
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬</a>
-
-<script>
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
-
-function contact() {
-  window.location.href = "https://wa.me/91XXXXXXXXXX";
-}
-</script>
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
 
 </body>
 </html>

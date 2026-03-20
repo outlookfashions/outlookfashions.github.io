@@ -2,119 +2,209 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KTailor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KTailor</title>
 
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; }
-    header { background:#000; color:#fff; padding:20px; text-align:center; }
-    header h1 { margin:0; }
-    header p { margin:5px 0 0; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    .hero {
-      padding:80px 20px;
-      text-align:center;
-      background:#f5f5f5;
-    }
-    .hero h2 { font-size:32px; margin-bottom:10px; }
-    .hero p { color:#555; }
+<style>
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+}
 
-    .btn {
-      display:inline-block;
-      margin-top:20px;
-      padding:12px 25px;
-      background:#000;
-      color:#fff;
-      text-decoration:none;
-      border-radius:5px;
-    }
+/* NAVBAR */
+nav {
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  z-index:1000;
+}
 
-    .section {
-      padding:50px 20px;
-      text-align:center;
-    }
+nav h2 { margin:0; }
 
-    .cards {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:20px;
-    }
+nav a {
+  color:#fff;
+  text-decoration:none;
+  margin-left:20px;
+}
 
-    .card {
-      border:1px solid #ddd;
-      padding:20px;
-      width:250px;
-      border-radius:8px;
-    }
+/* HERO */
+.hero {
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1521336575822-6da63fb45455') center/cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  text-align:center;
+}
 
-    footer {
-      background:#000;
-      color:#fff;
-      text-align:center;
-      padding:20px;
-    }
+.hero h1 {
+  font-size:55px;
+  margin:0;
+}
 
-    /* WhatsApp Button */
-    .whatsapp {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      background:#25D366;
-      color:#fff;
-      padding:15px;
-      border-radius:50%;
-      font-size:20px;
-      text-decoration:none;
-    }
-  </style>
+.hero p {
+  margin-top:10px;
+  font-size:18px;
+}
+
+.btn {
+  margin-top:25px;
+  padding:14px 35px;
+  background:#fff;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#000;
+  color:#fff;
+}
+
+/* SECTION */
+.section {
+  padding:80px 20px;
+  text-align:center;
+}
+
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.card {
+  width:300px;
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform:translateY(-10px);
+}
+
+.card img {
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+
+.card h3 {
+  padding:15px;
+}
+
+/* DARK SECTION */
+.dark {
+  background:#111;
+  color:#fff;
+}
+
+/* FOOTER */
+footer {
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1 { font-size:35px; }
+}
+</style>
 
 </head>
 
 <body>
 
-<header>
-  <h1>KTailor</h1>
-  <p>Perfect Fit. Personal Style.</p>
-</header>
+<nav>
+  <h2>KTailor</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
 <section class="hero">
-  <h2>Custom Tailoring for Every Occasion</h2>
-  <p>From formal wear to trendy outfits — we stitch your style to perfection.</p>
-  <a href="#contact" class="btn">Contact Now</a>
+  <h1>Wear Confidence</h1>
+  <p>Custom tailoring crafted for your personality</p>
+  <a href="#contact" class="btn">Get Your Style</a>
 </section>
 
 <section class="section">
-  <h2>Our Services</h2>
+  <h2>Collections</h2>
   <div class="cards">
-    <div class="card">Custom Stitching</div>
-    <div class="card">Alterations</div>
-    <div class="card">Formal Wear</div>
-    <div class="card">Casual & Trendy Designs</div>
+
+```
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
+  <h3>Women</h3>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+  <h3>Men</h3>
+</div>
+
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+  <h3>Gen-Z Trends</h3>
+</div>
+```
+
   </div>
 </section>
 
-<section class="section" style="background:#f9f9f9;">
-  <h2>Who We Serve</h2>
+<section class="section dark" id="services">
+  <h2>Services</h2>
   <div class="cards">
-    <div class="card">Working Professionals</div>
-    <div class="card">College Students</div>
-    <div class="card">School Students</div>
+    <div class="card"><h3>Custom Stitching</h3></div>
+    <div class="card"><h3>Alterations</h3></div>
+    <div class="card"><h3>Designer Wear</h3></div>
   </div>
 </section>
 
 <section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Reach out to us for your perfect outfit.</p>
+  <h2>Let’s Create Your Style</h2>
   <a href="https://wa.me/91XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
 </section>
 
 <footer>
-  <p>© 2026 KTailor. All rights reserved.</p>
+  <p>© 2026 KTailor</p>
 </footer>
 
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+<a href="https://wa.me/916369346765" class="whatsapp">💬</a>
 
 </body>
 </html>
